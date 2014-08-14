@@ -1,0 +1,8 @@
+cms_content:
+    resource: "@CmsContentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+cms_auth:
+    resource: "@CmsAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
