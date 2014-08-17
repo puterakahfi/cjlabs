@@ -1,4 +1,7 @@
 security:
+    acl:
+        connection : default
+         
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
 
@@ -35,7 +38,18 @@ security:
             #http_basic:
             #    realm: "Secured Demo Area"
 
-        
+        secured_area:
+            pattern:   ^/
+            anonymous: ~
+            form_login:
+                login_path: cms_auth_login
+                check_path: cms_auth_login_check
+
 
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /user, roles: ROLE_USER }
+        - { path: /admin, roles: ROLE_ADMIN }
+        - { path: /.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+   
