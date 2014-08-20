@@ -1,10 +1,11 @@
+acme_user:
+    resource: "@AcmeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 cms_content:
     resource: "@CmsContentBundle/Resources/config/routing.yml"
     prefix:   /
 
-cms_auth:
-    resource: "@CmsAuthBundle/Resources/config/routing.yml"
-    prefix:   /
 
 
 fos_user_security:
