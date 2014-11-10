@@ -1,3 +1,0 @@
-cms_content_dashboard:
-    path:     /
-    defaults: { _controller: CmsContentBundle:Dashboard:index }

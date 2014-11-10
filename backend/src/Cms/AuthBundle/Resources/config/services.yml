@@ -1,7 +1,0 @@
-parameters:
-#    cms_auth.example.class: Cms\AuthBundle\Example
-
-services:
-#    cms_auth.example:
-#        class: %cms_auth.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
