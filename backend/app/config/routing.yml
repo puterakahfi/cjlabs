@@ -1,0 +1,10 @@
+app_bundle_content:
+    resource: "@AppBundleContentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
