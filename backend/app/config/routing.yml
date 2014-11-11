@@ -3,8 +3,4 @@ app_bundle_content:
     type:     annotation
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-    prefix:   /
 
