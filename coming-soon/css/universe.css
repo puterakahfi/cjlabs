@@ -3,7 +3,7 @@ body{
 }
 
 h1{ text-shadow:none;}
-.e-campuz{background: transparent;}
+.e-campuz{background: transparent;z-index: 3}
 #footer{background: #5B1517; margin: 0px auto;opacity: 0.8;}
 
 .left_side {

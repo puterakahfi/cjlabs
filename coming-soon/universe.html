@@ -5,6 +5,7 @@
 	<title>Coming Soon</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link href="css/universe.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="tools/starry/css/style.css" />
 	<script type="text/javascript" src="tools/jquery.min.js"></script> 
 	<script src="tools/jquery.tagcanvas.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="tools/cufon-yui.js"></script>
@@ -19,11 +20,10 @@
 </head>
 <body>
 
+    <div id="midground"></div>
+
+
 	<section class="e-campuz" id="about">
-		<div class="ray ray1"></div>
-
-		<div class="ray ray3"></div>
-
 
 		<div class="main_container">
 
@@ -100,10 +100,10 @@
 		if( ! $('#cloudTag').tagcanvas({
 			textColour : '#ffffff',
 			outlineThickness : 0.2,
-			maxSpeed : 0.08,
-			textHeight: 20,
+			maxSpeed : 0.10,
+			textHeight: 14,
 			depth : 0.90,
-			padding:2
+			padding:5
 		})) {
      // TagCanvas failed to load
      $('#myCanvasContainer').hide();
