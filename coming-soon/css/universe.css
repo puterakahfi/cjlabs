@@ -1,0 +1,13 @@
+body{
+	background: #0e1d3a url(../images/universe.jpg) top center no-repeat;
+}
+
+h1{ text-shadow:none;}
+.e-campuz{background: transparent;}
+#footer{background: #5B1517; margin: 0px auto;opacity: 0.8;}
+
+.left_side {
+	width: 376px;
+	float: left;
+	margin-left: 150px;
+}
