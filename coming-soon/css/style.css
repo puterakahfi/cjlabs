@@ -33,7 +33,6 @@ text-decoration: underline;
 }
 
 a.logo {
-width: 418px;
 padding-top: 19px;
 margin: 0 auto;
 height: 145px;
@@ -85,10 +84,10 @@ letter-spacing: 0;
 }
 
 .right_side {
-width: 376px;
+width: 330px;
 float: right;
-margin-top: 20px;
-margin-right: 35px;
+margin-top: 38px;
+margin-right: 80px;
 }
 
 .left_side{
@@ -297,4 +296,9 @@ section .ray-bottom {
     -ms-transform: skewX(145deg) scaleX(-1);
     -o-transform: skewX(145deg)scaleX(-1);
     transform: skewX(145deg) scaleX(-1);
+}
+
+
+#github-badge{
+    z-index: 999;
 }
