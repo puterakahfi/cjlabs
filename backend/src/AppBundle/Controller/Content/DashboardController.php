@@ -6,15 +6,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-
+/**
+ * @Route("/dahsboard")
+ */
 class DashboardController extends Controller
 {
+
     /**
-     * @Route("/")
+     * @Route("/", name="dashboard")
      * @Template()
      */
-    public function indexAction($name="")
+    public function indexAction($name = "")
     {
         return array('name' => $name);
     }
+
 }
