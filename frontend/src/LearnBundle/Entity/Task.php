@@ -4,10 +4,20 @@
 
 namespace LearnBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Task
 {
 
+    /**
+     * @Assert\NotBlank()
+     */
     protected $task;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("\DateTime")
+     */
     protected $dueDate;
     protected $desc;
 
