@@ -1,3 +1,8 @@
+learn:
+    resource: "@LearnBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app_bundle_content:
     resource: "@AppBundle/Controller/"
     type:     annotation
