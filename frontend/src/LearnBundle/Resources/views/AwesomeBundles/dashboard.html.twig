@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}LearnBundle:AwesomeBundles:dashboard{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Info box -->
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title">Ivory Map Bundle</h3>
+                </div>
+                <div class="box-body">
+                    {{ google_map(map) }}
+                </div><!-- /.box-body -->
+
+            </div><!-- /.box -->
+        </div>
+        <div class="col-md-6">
+            <!-- Info box -->
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title">KnpMenu Bundle</h3>
+                </div>
+                <div class="box-body">
+                    {{ knp_menu_render('LearnBundle:Builder:mainMenu') }}
+                </div><!-- /.box-body -->
+
+            </div><!-- /.box -->
+        </div>
+
+
+    </div>
+{% endblock %}
