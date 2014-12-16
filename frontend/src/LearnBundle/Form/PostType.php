@@ -10,29 +10,23 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class PostType extends AbstractType
 {
+    private  $bootstrapInputAttr = array('class'=>'form-control');
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-                ->add('title')
-                ->add('summary', 'textarea')
-                ->add('content', 'textarea')
-                ->add('authorEmail', 'email')
-                ->add('publishedAt', 'datetime')
+                ->add('title', 'text', array('attr'=>$this->bootstrapInputAttr))
+                ->add('summary', 'textarea',array('attr'=>$this->bootstrapInputAttr))
+                ->add('content', 'textarea',array('attr'=>$this->bootstrapInputAttr))
+                ->add('authorEmail', 'email',array('attr'=>$this->bootstrapInputAttr))
+                ->add('publishedAt', 'date',array('attr'=>$this->bootstrapInputAttr))
         ;
     }
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
-    {
-
-        $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Post'
-        ));
-    }
-
+  
     public function getName()
     {
-        return 'post';
+        return 'Post';
     }
 
 }

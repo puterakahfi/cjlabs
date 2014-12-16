@@ -29,7 +29,7 @@ class FormController extends Controller
                 ->add('task', 'text')
                 ->add('dueDate', 'date')
                 ->add('desc', 'textarea')
-                ->add('save', 'submit', array('label' => 'Create Task'))
+                ->add('save', 'submit', array('label' => 'Create Task','attr'=>array('class'=>'btn btn-success')))
                 ->getForm();
 
         return $this->render('LearnBundle:Form:index.html.twig', array(
@@ -44,27 +44,40 @@ class FormController extends Controller
     public function simpleAction(Request $request)
     {
 
-
         $bootstrapFormClass = array('attr' => array('class' => 'form-control'));
         $task = new Task();
         $task->setTask('Write a blog post');
         $task->setDueDate(new \DateTime('tomorrow'));
 
-        $form = $this->createFormBuilder($task)
+        $form = $this->createFormBuilder()
                 ->add('task', 'text', $bootstrapFormClass)
                 ->add('dueDate', 'date')
                 ->add('desc', 'textarea', $bootstrapFormClass)
-                ->add('save', 'submit', array('label' => 'Create Task'))
+                ->add('save', 'submit', array('label' => 'Create Task','attr'=>array('class'=>'btn btn-success btn-sm')))
                 ->getForm();
-        
-        $formPostType = $this->createFormBuilder(new PostType())
-                ->getForm();
+        $form->handleRequest($request);
 
+        if ($form->isValid()) {
+            // perform some action, such as saving the task to the database
+
+            return $this->redirect($this->generateUrl('task_success'));
+        }
+
+        $formType = array();
+        $formPostType = $this->createForm(new PostType());
 
         return $this->render('LearnBundle:Form:simple.html.twig', array(
                     'form' => $form->createView(),
                     'formType' => $formPostType->createView(),
         ));
+    }
+    
+    /**
+     * 
+     * @Route("/form-examples", name="learn_form_examples") 
+     */
+    public function examplesAction(){
+        return $this->render('LearnBundle:Form:examples.html.twig');
     }
 
 }
