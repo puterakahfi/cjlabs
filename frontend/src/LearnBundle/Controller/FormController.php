@@ -7,7 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 #use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use LearnBundle\Entity\Task;
 use LearnBundle\Form\PostType;
-use LearnBundle\Form\Provinsi;
+use LearnBundle\Form\ProvinsiType;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -66,7 +66,7 @@ class FormController extends Controller
 
         $formType = array();
         $formPostType = $this->createForm(new PostType());
-        $provinsi = $this->createForm(new Provinsi());
+        $provinsi = $this->createForm(new ProvinsiType());
 
         return $this->render('LearnBundle:Form:simple.html.twig', array(
                     'form' => $form->createView(),

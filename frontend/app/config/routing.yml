@@ -1,3 +1,8 @@
+info_pengajian:
+    resource: "@InfoPengajianBundle/Controller/"
+    type:     annotation
+    prefix:   /pengajian
+
 learn:
     resource: "@LearnBundle/Controller/"
     type:     annotation
