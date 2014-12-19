@@ -12,11 +12,11 @@
 
  
  <target name="build"
-         depends="copy-parameters, composer, prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
+         depends="copy-parameters, composer, composer-updated,prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
          description=""/>
 
  <target name="build-parallel"
-         depends="copy-parameters, composer, prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
+         depends="copy-parameters, composer,composer-updated,  prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
          description=""/>
  
 
@@ -41,7 +41,7 @@
 </target>
 
 
- <target name="composer" description="Update composer dependencies">
+ <target name="composer-updated" description="Update composer dependencies">
  <exec executable="composer" failonerror="true">
   <arg value="update" />
   <arg value="--dev" />
