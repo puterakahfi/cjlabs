@@ -6,6 +6,13 @@
  <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
  <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
 
+<target name="vendors"
+         description="Update vendors">
+  <exec executable="bin/vendors" failonerror="true">
+     <arg value="update" />
+  </exec>
+ </target>
+ 
  <target name="build"
          depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
          description=""/>
