@@ -26,7 +26,8 @@
         "behat/mink-browserkit-driver":  "*",
         "behat/mink-selenium2-driver":   "*",
         "behat/mink-goutte-driver": "*",
-        "behat/mink-sahi-driver": "*"
+        "behat/mink-sahi-driver": "*",
+        "phpmd/phpmd" : "@stable"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
