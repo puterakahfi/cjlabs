@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="name-of-project" default="build">
  <!-- By default, we assume all tools to be on the $PATH -->
- <property name="toolsdir" value=""/>
+ <property name="toolsdir" value="bin/"/>
 
  <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
  <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
 
 
+
+
  
  <target name="build"
-         depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
+         depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox,copy-parameters, composer"
          description=""/>
 
  <target name="build-parallel"
          depends="prepare,lint,tools-parallel,phpunit,phpdox"
          description=""/>
  
- <target name="composer" description="Installing composer dependencies">
- <exec executable="composer" failonerror="true">
-  <arg value="install" />
-  <arg value="--dev" />
-  <arg value="--prefer-dist" />
-  <arg value="--no-progress" />
- 
-  <env key="SYMFONY_ENV" value="test"/>
- </exec>
-</target>
-
 
  <target name="tools-parallel" description="Run tools in parallel">
   <parallel threadCount="2">
@@ -189,4 +180,25 @@
          description="Generate project documentation using phpDox">
   <exec executable="${toolsdir}phpdox" dir="${basedir}/build"/>
  </target>
+ 
+ <target name="copy-parameters" description="Copy parameters.yml file">
+ <exec executable="cp" failonerror="true">
+  <arg path="app/config/parameters.yml.dist" />
+  <arg path="app/config/parameters.yml" />
+ </exec>
+</target>
+
+
+ <target name="composer" description="Installing composer dependencies">
+ <exec executable="composer" failonerror="true">
+  <arg value="install" />
+  <arg value="--dev" />
+  <arg value="--prefer-dist" />
+  <arg value="--no-progress" />
+ 
+  <env key="SYMFONY_ENV" value="test"/>
+ </exec>
+</target>
+
+
 </project>
