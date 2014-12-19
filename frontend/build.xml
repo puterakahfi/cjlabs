@@ -40,6 +40,18 @@
  </exec>
 </target>
 
+
+ <target name="composer" description="Update composer dependencies">
+ <exec executable="composer" failonerror="true">
+  <arg value="update" />
+  <arg value="--dev" />
+  <arg value="--prefer-dist" />
+  <arg value="--no-progress" />
+ 
+  <env key="SYMFONY_ENV" value="test"/>
+ </exec>
+</target>
+
  <target name="tools-parallel" description="Run tools in parallel">
   <parallel threadCount="2">
    <sequential>
