@@ -6,12 +6,7 @@
  <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
  <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
 
-<target name="vendors"
-         description="Update vendors">
-  <exec executable="bin/vendors" failonerror="true">
-     <arg value="update" />
-  </exec>
- </target>
+
  
  <target name="build"
          depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
@@ -20,6 +15,18 @@
  <target name="build-parallel"
          depends="prepare,lint,tools-parallel,phpunit,phpdox"
          description=""/>
+ 
+ <target name="composer" description="Installing composer dependencies">
+ <exec executable="composer" failonerror="true">
+  <arg value="install" />
+  <arg value="--dev" />
+  <arg value="--prefer-dist" />
+  <arg value="--no-progress" />
+ 
+  <env key="SYMFONY_ENV" value="test"/>
+ </exec>
+</target>
+
 
  <target name="tools-parallel" description="Run tools in parallel">
   <parallel threadCount="2">
