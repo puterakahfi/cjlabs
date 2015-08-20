@@ -16,7 +16,7 @@
          description=""/>
 
  <target name="build-parallel"
-         depends="copy-parameters, composer,composer-updated,  prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
+         depends="copy-parameters, composer,composer-updated, prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
          description=""/>
  
 

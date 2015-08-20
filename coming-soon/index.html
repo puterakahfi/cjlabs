@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Coming Soon</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/universe.css" rel="stylesheet" type="text/css" />
+		<link href="tools/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="tools/starry/css/style.css" />
+	<script type="text/javascript" src="tools/jquery.min.js"></script> 
+	<script src="tools/jquery.tagcanvas.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="tools/cufon-yui.js"></script>
+	<script type="text/javascript" src="tools/tweetie/tweetie.js"></script>
+	<script type="text/javascript" src="tools/Bebas_400.font.js"></script>
+	<script type="text/javascript" src="tools/Bell_Gothic_Std_300.font.js"></script>
+	<script type="text/javascript">
+		Cufon.replace('a.logo', {fontFamily: 'Bebas'});
+		Cufon.replace('a.logo span', {fontFamily: 'Bell Gothic Std'});
+	</script>
+
+</head>
+<body>
+
+<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-12">
+	<div id="midground"></div>
+
+
+	<section class="e-campuz" id="about">
+
+		<div class="main_container">
+
+
+			<div class="header">
+				<h1><a class="logo" href="#">CJLABS<span>"Leverage your skills to the next level"</span></a></h1>
+			</div>
+			<div class="content">
+
+				<h1>Coming Soon!<span>This web under heavy development</span></h1>
+				
+				<div class="left_side">
+					<div id="myCanvasContainer">
+						<canvas id="cloudTag">
+
+							<ul>
+								<li><a href="#">UML With Visual Paradigm</a></li>
+								<li><a href="#">PHP</a></li>
+								<li><a href="#">JQuery</a></li>
+								<li><a href="#">CSS</a></li>
+								<li><a href="#">Codeigniter</a></li>
+								<li><a href="#">Git</a></li>
+								<li><a href="#">Photoshop</a></li>
+								<li><a href="#">Ilustrator</a></li>
+								<li><a href="#">Codeigniter</a></li>
+								<li><a href="#">HTML</a></li>
+								<li><a href="#">DFD</a></li>
+								<li><a href="#">Mindmap</a></li>
+								<li><a href="#">Flowchart</a></li>
+								<li><a href="#">OOP Programming</a></li>
+								<li><a href="#">OOP Pattern</a></li>
+								<li><a href="#">SOLID Principle</a></li>
+								<li><a href="#">MySQL</a></li>
+								<li><a href="#">Wordpress</a></li>
+								<li><a href="#">Symfony</a></li>
+								<li><a href="#">Bootstrap</a></li>
+								<li><a href="#">Angular JS</a></li>
+								<li><a href="#">Refactoring</a></li>
+								<li><a href="#">Bimbingan Skripsi/TA </a></li>
+								
+							</ul>
+						</canvas>
+					</div>
+				</div>
+				<div class="right_side">
+					<p style="display:none;">// <a href="mailto:puterakahfi@gmail.com">aswade.itsd@gmail.com</a><br/></p>
+					<ul class="s_icons">
+						<li class="fb"><a target="__blank" href="https://www.facebook.com/codejunior"></a></li>
+						<li class="tw"><a target="__blank" href="https://twitter.com/puterakahfi"></a></li>
+				</div>
+			</div> 
+
+
+			<div class="ray-bottom ray1"></div>
+			<div class="ray-bottom ray2"></div>
+			<div class="ray-bottom ray3"></div>
+
+
+		</section>
+
+<!--
+		<div id="footer">
+			<div id="supported">
+				made with love by codejunior
+			</div>
+		</div>
+-->
+	</div>
+
+</section>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<script>
+	$(function(){
+
+		if( ! $('#cloudTag').tagcanvas({
+			textColour : '#ffffff',
+			outlineThickness : 0.2,
+			maxSpeed : 0.10,
+			textHeight: 14,
+			depth : 0.90,
+			padding:5,
+			shape:"sphere"
+		})) {
+     // TagCanvas failed to load
+     		$('#myCanvasContainer').hide();
+ 		};
+
+ $("#cloudTag li a").click(function(e){
+ 	e.preventDefault();
+ });
+
+
+});
+</script>
