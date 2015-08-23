@@ -3,42 +3,36 @@
 namespace AppBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\DependencyInjection\ContainerAware;
 
-class MenuBuilder
-{
+class Builder extends ContainerAware {
 
-    private $factory;
+    public function mainMenu(FactoryInterface $factory, array $options) {
+      
+        /**
+        $menu = $factory->createItem('root', array('attributes' => array('class' => 'sidebar-menu')));
 
-    /**
-     * @param FactoryInterface $factory
-     */
-    public function __construct(FactoryInterface $factory)
-    {
-        $this->factory = $factory;
-    }
+        $menu->addChild('System Management', array('uri' => '#', 'attributes' => array('class' => 'treeview active')));
 
-    public function createMainMenu(FactoryInterface $factory, RequestStack $requestStack)
-    {
-        $menu = $factory->createItem('root');
-    	$menu->setChildrenAttribute('class', 'nav');
- 
-		$menu->addChild('Projects', array('route' => 'acme_hello_projects'))
-			->setAttribute('icon', 'icon-list');
- 
-		$menu->addChild('Employees', array('route' => 'acme_hello_employees'))
-			->setAttribute('icon', 'icon-group');
- 
 
-        return $menu;
-    }
+        $menu['System Management']->addChild('User Management', array('route' => 'dashboard'));
+        $menu['System Management']->addChild('Module Management', array('route' => 'dashboard'));
+        $menu['System Management']->addChild('Module Management', array('route' => 'dashboard'));
+        */
 
-    public function createSidebarMenu(FactoryInterface $factory, RequestStack $requestStack)
-    {
-        $menu = $this->factory->createItem('sidebar');
+        $menu = $factory->createItem('root', array('attributes' => array('class' => 'nav')));
 
-        $menu->addChild('Sidebar', array('route' => 'dashboard'));
-        // ... add more children
+        $menu->addChild('page1');
+        $menu->addChild('page2');
+
+        $menu['page2']->addChild('page2a');
+        $menu['page2']->addChild('page2b');
+        $menu['page2']->addChild('page2c');
+
+        $menu->addChild('page3');
+        $menu->addChild('page4');
+
+
 
         return $menu;
     }
