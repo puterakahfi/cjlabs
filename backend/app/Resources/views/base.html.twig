@@ -11,6 +11,7 @@
     'bootstrap/css/bootstrap.min.css'
     'css/AdminLTE.min.css'
     'css/skins/_all-skins.min.css'
+    'css/lte.custom.css'
     'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'
     filter='cssrewrite' output='css/compiled/app.css' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -32,7 +33,7 @@
                 <!-- Logo -->
                 <a href="index2.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>CJ</b></span>
+                    <span class="logo-mini"><img src="{{ asset('favicon.ico') }}" /></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg"><b>CJLABS</b>CMS <sup>&beta;</sup></span>
                 </a>
@@ -291,16 +292,6 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-                    <!-- search form -->
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
-                    <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     {% include 'Layouts/side_menu.html.twig' %}
                 </section>
@@ -311,10 +302,12 @@
             <div class="content-wrapper">
 
                 <section class="content">
-                    <!-- Content Header (Page header) -->
-                    {% block content %}
+                    <div class="box box-solid">
+                        <!-- Content Header (Page header) -->
+                        {% block content %}
 
-                    {% endblock %}
+                        {% endblock %}
+                    </div>
                 </section>
 
 
@@ -503,8 +496,9 @@
     'js/plugins/jQuery/jQuery-2.1.4.min.js'
     'bootstrap/js/bootstrap.min.js'
     'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js'
+    'vendor/backbone/backbone-min.js'
+    'vendor/underscore/underscore-min.js'
     'js/app.min.js'
-    'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'
     'js/plugins/morris/morris.min.js'
     'js/plugins/sparkline/jquery.sparkline.min.js'
     'js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'
@@ -512,13 +506,9 @@
     output='js/compiled/app.js' %}
     <script src="{{ asset_url }}"></script>
 
-
-    <script>
-        $.widget.bridge('uibutton', $.ui.button);
-    </script>
-
     {% endjavascripts %}
 
+    <script data-main="{{ asset('require.config.js') }}" src="{{ asset('vendor/requirejs/require.js') }}"></script>
 
 </html>
 
