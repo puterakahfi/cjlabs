@@ -19,5 +19,13 @@ class RoleController extends Controller
     {
         return $this->render('Role/index.html.twig');
     }
+    
+     /**
+     * @Route("/input", name="role_input")
+     */
+    function inputAction()
+    {
+        return $this->render('Role/input.html.twig');
+    }
 
 }
