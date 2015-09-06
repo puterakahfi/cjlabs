@@ -1,28 +1,60 @@
 <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview active">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu menu-open" style="display: block;">
-                <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li class=""><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-files-o"></i>
-                <span>System Management</span>
-                <span class="label label-primary pull-right">2</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Users</a></li>
-                <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Menu</a></li>
-               </ul>
-            </li>
-            <li>
-              <a href="pages/widgets.html">
-                <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
-              </a>
-            </li>
-          </ul>
+    <li class="header"> MAIN MENU
+    </li>    
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-server"></i>
+            <span>System Management</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('user_index') }}"><i class="fa fa-users"></i> Users</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-user-plus"></i> Roles</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-bars"></i>  Menu</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-exchange"></i>
+            <span>Data Reference</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('user_index') }}"><i class="fa fa-flag"></i> Language</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-street-view"></i> Address </a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-circle-o"></i> Timezone </a></li>
+
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>Settings</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('user_index') }}"><i class="fa fa-circle-o"></i> Genereal Setting</a></li>
+            <li><a href="{{ path('user_index') }}"><i class="fa fa-circle-o"></i> Themes</a></li>
+
+        </ul>
+    </li>
+
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-wrench"></i>
+            <span>Tools</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('user_index') }}"><i class="fa fa-circle-o"></i> Cache</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-database"></i> Database Backup </a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-tasks"></i> System Monitoring </a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-download"></i> Export Data</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-upload"></i> Import Data </a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-archive"></i> Modules</a></li>
+            <li><a href="{{ path('role_index') }}"><i class="fa fa-archive"></i> SEO Optimazion </a></li>
+
+        </ul>
+    </li>
+
+</ul>
