@@ -1,0 +1,50 @@
+/* 
+    Created on : Sep 4, 2015, 2:43:35 PM
+    Author     : dwc
+*/
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.42857143;
+    color: #696c74;
+    font-size: 13px;
+    direction: ltr;
+}
+
+.box{
+    border-radius: 4px;
+}
+
+.skin-yellow .main-header .logo {
+    background-color: #1a2226;
+    color: #fff;
+    border-bottom: 0 solid white;
+}
+
+
+.skin-yellow .main-header .logo:hover {
+    background-color: black;
+}
+
+.skin-yellow .main-header .navbar {
+    background-color: #222D32;
+}
+
+
+.skin-yellow .main-header .logo {
+    background-color: #FB8121;
+    color: #fff;
+    border-bottom: 0 solid white;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #d8dce3;
+    color: #3b4354;
+    font-size: 12px;
+}
